@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 200" fill="none" role="img" aria-labelledby="title desc">
+	<title id="title">Motor City Law Firm logo</title>
+	<desc id="desc">Horizontal premium logo with a shield and scales icon beside the brand name.</desc>
+	<defs>
+		<style>
+			.navy { fill: #0B1F3A; }
+			.gold { fill: #C9A14A; }
+			.stroke-gold { stroke: #C9A14A; }
+			.stroke-navy { stroke: #0B1F3A; }
+			.wordmark {
+				font-family: "Playfair Display", "Times New Roman", serif;
+				font-weight: 700;
+				letter-spacing: 0.08em;
+			}
+			.submark {
+				font-family: "Playfair Display", "Times New Roman", serif;
+				font-weight: 600;
+				letter-spacing: 0.46em;
+			}
+		</style>
+	</defs>
+
+	<g transform="translate(28 18)">
+		<path class="navy" d="M72 6 124 24v50c0 26-17 46-52 60C37 120 20 100 20 74V24Z"/>
+		<path d="M72 16 96 25v35c0 15-7 28-24 41-17-13-24-26-24-41V25Z" fill="#102C52"/>
+		<path class="gold" d="M72 22c-11 0-19 4-25 11l-6-3c7-10 18-15 31-15s24 5 31 15l-6 3c-6-7-14-11-25-11Z"/>
+		<path class="navy" d="M72 31 86 27l-1 10c0 9-4 16-13 23-9-7-13-14-13-23l-1-10 14 4Z"/>
+		<path class="gold" d="M84 33 102 27l-8 13-13 2 3-9Z"/>
+		<path class="gold" d="M60 33 42 27l8 13 13 2-3-9Z"/>
+		<path class="gold" d="M72 42c-4 0-8 2-10 5 2 4 6 8 10 11 4-3 8-7 10-11-2-3-6-5-10-5Z"/>
+		<circle cx="79" cy="36" r="2.2" class="navy"/>
+	</g>
+
+	<g transform="translate(220 66)">
+		<text class="wordmark" x="0" y="0" font-size="58" fill="#0B1F3A">Motor City</text>
+		<text class="submark gold" x="2" y="48" font-size="20">LAW FIRM</text>
+		<rect x="2" y="62" width="214" height="4" rx="2" class="gold"/>
+	</g>
+</svg>

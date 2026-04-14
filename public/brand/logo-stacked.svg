@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 620" fill="none" role="img" aria-labelledby="title desc">
+	<title id="title">Motor City Law Firm stacked logo</title>
+	<desc id="desc">Stacked premium logo with shield and scales icon above the brand name.</desc>
+	<defs>
+		<style>
+			.navy { fill: #0B1F3A; }
+			.gold { fill: #C9A14A; }
+			.stroke-gold { stroke: #C9A14A; }
+			.wordmark {
+				font-family: "Playfair Display", "Times New Roman", serif;
+				font-weight: 700;
+				letter-spacing: 0.08em;
+			}
+			.submark {
+				font-family: "Playfair Display", "Times New Roman", serif;
+				font-weight: 600;
+				letter-spacing: 0.42em;
+			}
+		</style>
+	</defs>
+
+	<g transform="translate(140 42)">
+		<path class="navy" d="M120 6 208 38v92c0 42-28 76-88 104C60 206 32 172 32 130V38Z"/>
+		<path d="M120 26 170 45v60c0 25-15 47-50 68-35-21-50-43-50-68V45Z" fill="#102C52"/>
+		<path class="gold" d="M120 38c-17 0-31 7-40 20l-10-5c10-17 26-26 50-26s40 9 50 26l-10 5c-9-13-23-20-40-20Z"/>
+		<path class="navy" d="M120 49 142 42l-1 16c0 14-5 25-21 37-16-12-21-23-21-37l-1-16 22 7Z"/>
+		<path class="gold" d="M140 52 168 42l-13 20-20 2 5-12Z"/>
+		<path class="gold" d="M100 52 72 42l13 20 20 2-5-12Z"/>
+		<path class="gold" d="M120 65c-6 0-11 3-15 8 3 5 9 10 15 15 6-5 12-10 15-15-4-5-9-8-15-8Z"/>
+		<circle cx="131" cy="58" r="2.4" class="navy"/>
+	</g>
+
+	<g transform="translate(260 332)">
+		<text class="wordmark" x="0" y="0" font-size="60" text-anchor="middle" fill="#0B1F3A">Motor City</text>
+		<text class="submark gold" x="0" y="54" font-size="20" text-anchor="middle">LAW FIRM</text>
+		<rect x="-120" y="68" width="240" height="4" rx="2" class="gold"/>
+	</g>
+</svg>
