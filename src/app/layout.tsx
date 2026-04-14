@@ -16,7 +16,7 @@ const inter = Inter({
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
-  weight: ["600", "700", "800"],
+  weight: ["600", "700"],
 });
 
 export const metadata: Metadata = {

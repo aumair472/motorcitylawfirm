@@ -49,7 +49,7 @@ export function HeroSection() {
         </div>
 
         <div className="flex items-center justify-center">
-          <div className="relative w-full max-w-lg overflow-hidden rounded-[2rem] border border-white/10 bg-white/8 p-5 backdrop-blur-sm">
+          <div className="relative w-full max-w-lg overflow-hidden rounded-[2rem] border border-white/10 bg-white/10 p-5">
             <div className="grid gap-4 rounded-[1.75rem] bg-white p-5 text-[var(--primary)] shadow-2xl shadow-slate-950/15">
               <div className="flex items-center gap-4">
                 <div>

@@ -1,16 +1,24 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useRef } from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { siteConfig } from "@/lib/site-data";
 
 const contactSchema = z.object({
-  name: z.string().optional(),
-  phone: z.string().min(7, "Please enter a valid phone number."),
+  name: z.string().max(120).optional(),
+  phone: z
+    .string()
+    .min(7, "Please enter a valid phone number.")
+    .max(30, "Please enter a valid phone number."),
   caseType: z.string().min(3, "Please select a case type."),
-  message: z.string().min(10, "Please provide a short description of what happened."),
+  message: z
+    .string()
+    .min(10, "Please provide a short description of what happened.")
+    .max(2000, "Please keep your message under 2000 characters."),
+  companyWebsite: z.string().max(0).optional(),
 });
 
 type ContactFormValues = z.infer<typeof contactSchema>;
@@ -25,6 +33,8 @@ const chargeTypes = [
 
 export function ContactForm({ submitLabel = "Request Free Consultation" }: { submitLabel?: string }) {
   const [submitted, setSubmitted] = useState(false);
+  const mountedAt = useRef<number>(Date.now());
+
   const {
     register,
     handleSubmit,
@@ -36,14 +46,27 @@ export function ContactForm({ submitLabel = "Request Free Consultation" }: { sub
     },
   });
 
+  const sanitize = (value: string) => value.replace(/[<>]/g, "").replace(/[\u0000-\u001F\u007F]/g, "").trim();
+
   const onSubmit = async (values: ContactFormValues) => {
-    const subject = encodeURIComponent(`Free consultation request - ${values.caseType}`);
+    const elapsed = Date.now() - mountedAt.current;
+    if (elapsed < 1500 || values.companyWebsite) {
+      setSubmitted(true);
+      return;
+    }
+
+    const safeName = sanitize(values.name || "Not provided");
+    const safePhone = sanitize(values.phone);
+    const safeCaseType = sanitize(values.caseType);
+    const safeMessage = sanitize(values.message);
+
+    const subject = encodeURIComponent(`Free consultation request - ${safeCaseType}`);
     const body = encodeURIComponent(
       [
-        `Name: ${values.name || "Not provided"}`,
-        `Phone: ${values.phone}`,
-        `Case Type: ${values.caseType}`,
-        `Details: ${values.message}`,
+        `Name: ${safeName || "Not provided"}`,
+        `Phone: ${safePhone}`,
+        `Case Type: ${safeCaseType}`,
+        `Details: ${safeMessage}`,
       ].join("\n"),
     );
 
@@ -96,6 +119,14 @@ export function ContactForm({ submitLabel = "Request Free Consultation" }: { sub
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)} className="grid gap-4 rounded-[1.75rem] bg-slate-50 p-5 sm:p-6">
+          <input
+            {...register("companyWebsite")}
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            className="hidden"
+          />
+
           <div className="grid gap-4 md:grid-cols-2">
             <label className="grid gap-2 text-sm font-medium text-slate-700">
               Name
