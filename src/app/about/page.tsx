@@ -57,13 +57,6 @@ export default function AboutPage() {
 
           <div className="flex items-center justify-center">
             <div className="w-full max-w-md rounded-[2rem] bg-[linear-gradient(180deg,#0b1f3a_0%,#102c52_100%)] p-6 text-white">
-              <Image
-                src="/attorney-profile.svg"
-                alt="Attorney profile at Motor City Law Firm"
-                width={360}
-                height={360}
-                className="mx-auto rounded-[1.5rem] bg-white p-6"
-              />
               <div className="mt-6 rounded-[1.5rem] border border-white/10 bg-white/5 p-5 text-sm leading-6 text-slate-200">
                 <h2 className="text-2xl font-semibold text-white">Local insight. Courtroom focus. Results-driven defense.</h2>
                 <p className="mt-3">

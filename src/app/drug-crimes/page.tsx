@@ -237,10 +237,9 @@ export default function DrugCrimesPage() {
               Theft &amp; Property Crimes
             </Link>
           </div>
-+          <p className="mt-6 text-sm leading-7 text-slate-700">
-+            Internal linking between services helps clients quickly find relevant legal answers and helps search
-+            engines understand the depth of your criminal defense coverage across related topics.
-+          </p>
+          <p className="mt-6 text-sm leading-7 text-slate-700">
+            Internal linking between services helps clients quickly find relevant legal answers and helps search engines understand the depth of your criminal defense coverage across related topics.
+            </p>
         </article>
       </section>
 

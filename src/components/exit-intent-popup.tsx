@@ -17,20 +17,10 @@ export function ExitIntentPopup() {
     const timer = window.setTimeout(() => {
       window.sessionStorage.setItem(storageKey, "seen");
       setVisible(true);
-    }, 24000);
-
-    const handleMouseLeave = (event: MouseEvent) => {
-      if (event.clientY <= 0) {
-        window.sessionStorage.setItem(storageKey, "seen");
-        setVisible(true);
-      }
-    };
-
-    document.addEventListener("mouseleave", handleMouseLeave);
+    }, 1500);
 
     return () => {
       window.clearTimeout(timer);
-      document.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, []);
 

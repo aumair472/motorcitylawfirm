@@ -52,15 +52,6 @@ export function HeroSection() {
           <div className="relative w-full max-w-lg overflow-hidden rounded-[2rem] border border-white/10 bg-white/8 p-5 backdrop-blur-sm">
             <div className="grid gap-4 rounded-[1.75rem] bg-white p-5 text-[var(--primary)] shadow-2xl shadow-slate-950/15">
               <div className="flex items-center gap-4">
-                <div className="relative h-20 w-20 overflow-hidden rounded-2xl bg-slate-100">
-                  <Image
-                    src="/motor-city-shield.svg"
-                    alt="Motor City Law Firm shield"
-                    fill
-                    priority
-                    className="object-cover p-3"
-                  />
-                </div>
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--accent)]">
                     Immediate legal support

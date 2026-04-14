@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { navLinks, siteConfig, trustBadges } from "@/lib/site-data";
+import { services, siteConfig, trustBadges } from "@/lib/site-data";
 
 export function SiteFooter() {
   return (
@@ -31,12 +31,10 @@ export function SiteFooter() {
             Practice Areas
           </div>
           <ul className="mt-4 grid gap-3 text-sm text-slate-200">
-            {navLinks
-              .filter((link) => link.href !== "/" && link.href !== "/about" && link.href !== "/contact")
-              .map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="transition hover:text-white">
-                    {link.label}
+            {services.map((service) => (
+                <li key={service.href}>
+                  <Link href={service.href} className="transition hover:text-white">
+                    {service.title}
                   </Link>
                 </li>
               ))}

@@ -246,11 +246,9 @@ export default function DuiDefensePage() {
               Theft &amp; Property Crimes
             </Link>
           </div>
-+          <p className="mt-6 text-sm leading-7 text-slate-700">
-+            If you are dealing with more than one investigation or have prior legal exposure, cross-charge defense
-+            planning can be critical. Coordinated strategy often improves outcomes by aligning messaging,
-+            evidentiary challenges, and negotiation posture across all related allegations.
-+          </p>
+                   <p className="mt-6 text-sm leading-7 text-slate-700">
+            If you are dealing with more than one investigation or have prior legal exposure, cross-charge defense planning can be critical. Coordinated strategy often improves outcomes by aligning messaging, evidentiary challenges, and negotiation posture across all related allegations.
+            </p>
         </article>
       </section>
 
